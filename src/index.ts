@@ -1,14 +1,3 @@
-//Comando para criar arquivo final em js
-// tsc index.ts
-
-//Comando abaixo direciona a conversão do .ts para o local correto (public)
-// tsc src/index.ts --outDir public
-
-//Emitir a conversão sem erro
-//tsc src/index.ts --noEmitOnError
-
-
-
 const input1 = document.querySelector('#numero1') as HTMLInputElement;
 const input2 = document.querySelector('#numero2') as HTMLInputElement;
 const button = document.querySelector('#calc')

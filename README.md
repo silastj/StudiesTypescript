@@ -5,4 +5,11 @@
 - Explicando acima src/index.ts o caminho do arquivo .ts
 
 
+### NÃO GERAR O ARQUIVO CASO TENHA ALGUM ERRO ###
+- tsc src/index.ts --noEmitOnError
+
+### Comando abaixo direciona a conversão do .ts para o local correto (public) ### 
+- tsc src/index.ts --outDir public
+
+
 ### ###
