@@ -20,3 +20,8 @@ function Somar(numeroUm, numeroDois) {
     return numeroUm + numeroDois;
 }
 console.log(Somar(10, 20));
+//TYPES EM FUNÇÕES ANONIMAS
+var palavras = ['casa', 'carro', 'moto', 'apartamento'];
+palavras.forEach(function (pala) {
+    console.log(pala.toUpperCase());
+});
