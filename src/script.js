@@ -31,7 +31,8 @@ palavras.forEach(function (pala) {
         console.log(pala);
     }
 });
-//TYPES EM OBJETOS
+//TYPES EM OBJETOS e 
+//PROPRIEDADES OPCIONAIS que aceite apenas nome,
 var user = {
     name: 'Silas',
     idade: 37
@@ -40,7 +41,34 @@ var valores = {
     automovel: 'Carro',
     imovel: 'Chacara'
 };
-function Dados(usuario, valores) {
+function Dados(usuario, // ? não é obrigatorio
+valores) {
     return "O nome \u00E9 " + usuario.name + " e sua idade: " + usuario.idade + ". Ele tem os bens: " + valores.imovel + " e " + valores.automovel;
 }
 console.log(Dados(user, valores));
+//PARAMETROS COM VARIOS TIPOS
+//UNION TYPES
+var numberShoes = 41;
+numberShoes = '41';
+function wichShoes(numberShoes) {
+    if (typeof numberShoes === 'string') {
+        console.log(numberShoes.toUpperCase());
+    }
+    else {
+        console.log(numberShoes);
+    }
+}
+wichShoes(90);
+wichShoes('90');
+//NÁ FUNÇÃO ABAIXO IREMOS RECEBER i e podemos usar o type acima e tb podemos 
+//USAR O type na return da função
+function NNidade(i) {
+    return i;
+}
+function NameComplete(usuario) {
+    return "O " + usuario.nome + " tem a " + usuario.idade;
+}
+console.log(NameComplete({
+    nome: 'Silas',
+    idade: 37
+}));

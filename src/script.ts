@@ -55,7 +55,54 @@ function Dados(
     }
 console.log(Dados(user, valores))
 
+//PARAMETROS COM VARIOS TIPOS
+//UNION TYPES
+let numberShoes: number | string = 41
+numberShoes = '41'
 
+function wichShoes(numberShoes: string | number){
+    if(typeof numberShoes === 'string'){
+        console.log(numberShoes.toUpperCase())
+    }else{
+        console.log(numberShoes)
+    }
+}
+wichShoes(90)
+wichShoes('90')
+
+//CRIAÇÃO DE TYPE
+//CRIAMOS UM TIPO IDADE QUE RECEBE STRING OU NUMBER
+ type Idade = string | number;
+
+ //NÁ FUNÇÃO ABAIXO IREMOS RECEBER i e podemos usar o type acima e tb podemos 
+ //USAR O type na return da função
+ function NNidade(i: Idade) : Idade{
+     return i;
+ } 
+
+ // USAMOS MAIS EM OBJETO
+//  type User ={
+//      nome: string,
+//      idade: number
+//  }
+ //OU INTERFACE 
+ //A DIFERENÇA É QUE O INTERFACE PODEMOS INCLUIR TYPE DEPOIS
+ // JÁ NO TYPE NÃO PODEMOS INCLUIR MAIS.
+
+ interface User {
+     nome: string,
+ }
+ interface User {
+     idade: number
+ }
+ function NameComplete(usuario: User){
+     return `O ${usuario.nome} tem ${usuario.idade}`;
+ }
+
+ console.log(NameComplete({
+     nome:'Silas',
+     idade:37
+ }))
 
 
 
