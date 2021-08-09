@@ -104,8 +104,70 @@ wichShoes('90')
      idade:37
  }))
 
+ //TYPE ASSERTIONS 
+ //DEIXAR O TYPESCRIPT MAIS ESPECIFICO
+ //IREMOS FALAR PARA  O TYPESCRIPT QUE ELE É UM INPUT
 
+ const diceField = document.querySelector('.campo') as HTMLInputElement;
+ console.log(diceField.value)
 
+//TYPE LITERAIS, RESUMINDO VC FIXA OS VALORES QUE IRÁ RECEBER
+//INTERFACE LITERAIS
+interface Quadro {
+    material: string,
+    alinhamento: 'top' | 'right' | 'bottom' | 'left'
+}
 
+function createPainting(material: string, alinhamento: string){
+    return material + ''+ alinhamento
+}
+console.log(createPainting('casa', 'top'))
 
+type Opcoes = {
+    width: number,
+    height : number
+}
+function configurar(props: Opcoes| 'auto'){
+    return 'Olá'
+}
+configurar('auto')
+configurar({width: 10, height:20})
 
+type Dados ={
+    url: string,
+    method: 'GET' | "POST"
+}
+
+let req: Dados = {
+    url: 'https://www.google.com',
+    method:"GET"
+}
+
+function getURL(url:string, method:"GET" | "POST"){
+
+}
+getURL(req.url, req.method)
+
+//TYPE PARA FUNCTION
+//TIPANDO UMA FUNÇÃO
+
+type DiceSomar = (n1:number, n2:number) => number;
+const Somando: DiceSomar = (n1, n2) => {
+    return n1 + n2;
+}
+
+//RETURN VOID
+//QUANDO FUNÇÃO NÃO TEM NENHUM TIPO DE RETURN 
+ function removeElemento(elemento:HTMLElement): void {
+     elemento.remove();
+ }
+//  removeElemento(document.getElementById('teste'));
+ 
+ //OU
+
+ type GenericVoid = () => void; // criaremos um type void
+ const functionVoid = () => { // conseguimos trazer um return usando o void
+     return 'Aceitou o void'
+ }
+const resVoid = functionVoid();
+console.log(resVoid)

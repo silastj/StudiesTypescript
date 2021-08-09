@@ -66,9 +66,43 @@ function NNidade(i) {
     return i;
 }
 function NameComplete(usuario) {
-    return "O " + usuario.nome + " tem a " + usuario.idade;
+    return "O " + usuario.nome + " tem " + usuario.idade;
 }
 console.log(NameComplete({
     nome: 'Silas',
     idade: 37
 }));
+//TYPE ASSERTIONS 
+//DEIXAR O TYPESCRIPT MAIS ESPECIFICO
+//IREMOS FALAR PARA  O TYPESCRIPT QUE ELE É UM INPUT
+var diceField = document.querySelector('.campo');
+console.log(diceField.value);
+function createPainting(material, alinhamento) {
+    return material + '' + alinhamento;
+}
+console.log(createPainting('casa', 'top'));
+function configurar(props) {
+    return 'Olá';
+}
+configurar('auto');
+configurar({ width: 10, height: 20 });
+var req = {
+    url: 'https://www.google.com',
+    method: "GET"
+};
+function getURL(url, method) {
+}
+getURL(req.url, req.method);
+var Somando = function (n1, n2) {
+    return n1 + n2;
+};
+//RETURN VOID
+//QUANDO FUNÇÃO NÃO TEM NENHUM TIPO DE RETURN 
+function removeElemento(elemento) {
+    elemento.remove();
+}
+var functionVoid = function (nn) {
+    return 'Aceitou o void';
+};
+var resVoid = functionVoid('silas');
+console.log(resVoid);
