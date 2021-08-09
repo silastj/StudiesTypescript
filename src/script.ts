@@ -37,7 +37,8 @@ palavras.forEach((pala) => {
     }
 })
 
-//TYPES EM OBJETOS
+//TYPES EM OBJETOS e 
+//PROPRIEDADES OPCIONAIS que aceite apenas nome,
 let user = {
     name: 'Silas',
     idade: 37
@@ -47,12 +48,12 @@ let valores = {
     imovel: 'Chacara'
 }
 function Dados(
-    usuario:{name:string, idade:number},
+    usuario:{name:string, idade?:number}, // ? não é obrigatorio
     valores:{automovel: string, imovel:string}
     ) {
-    return `O nome é ${usuario.name} e sua idade: ${usuario.idade}. Ele tem os bens: ${valores.imovel} e ${valores.automovel}`
-}
-Dados(user, valores)
+        return `O nome é ${usuario.name} e sua idade: ${usuario.idade}. Ele tem os bens: ${valores.imovel} e ${valores.automovel}`
+    }
+console.log(Dados(user, valores))
 
 
 

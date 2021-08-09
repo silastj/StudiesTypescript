@@ -21,7 +21,26 @@ function Somar(numeroUm, numeroDois) {
 }
 console.log(Somar(10, 20));
 //TYPES EM FUNÇÕES ANONIMAS
-var palavras = ['casa', 'carro', 'moto', 'apartamento'];
+//CASO PASSE  STRING E NUMBER, FAZEMOS UMA VERIFICAÇÃO
+var palavras = ['casa', 'carro', 'moto', 'apartamento', 90];
 palavras.forEach(function (pala) {
-    console.log(pala.toUpperCase());
+    if (typeof pala === 'string') {
+        console.log(pala.toUpperCase());
+    }
+    else {
+        console.log(pala);
+    }
 });
+//TYPES EM OBJETOS
+var user = {
+    name: 'Silas',
+    idade: 37
+};
+var valores = {
+    automovel: 'Carro',
+    imovel: 'Chacara'
+};
+function Dados(usuario, valores) {
+    return "O nome \u00E9 " + usuario.name + " e sua idade: " + usuario.idade + ". Ele tem os bens: " + valores.imovel + " e " + valores.automovel;
+}
+console.log(Dados(user, valores));
