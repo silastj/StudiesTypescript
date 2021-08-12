@@ -57,5 +57,31 @@
   ]
 
 
-### Entendo o Target ###
+### ENTENDENDO O TARGET ###
+- Para escolher a versão do ecma javascript final ou es5 ou es6
+
+### LIB ###
+
+
+### outDIr e rooDir ###
+- Apontar os arquivos para copilar e direcionar os arquivos de saida
+### REMOVER COMENTARIOS - noEmit - noEmitOnError - e outros ###
+
+- Deixar como true no arquivo tsconfig.json
+- "removeComments": true,
+
+- noEmit, ELe não gera os arquivos
+- noEmitOnError Ele não Emite nada com erro ""noEmitOnError": true, " 
+
+- Variavel criada e não usada
+- "noUnusedLocals": true,  
+
+- Parametro que não está sendo usado
+- "noUnusedParameters": true,
+
+- 
+
+
+
+
 

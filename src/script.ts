@@ -158,10 +158,10 @@ const Somando: DiceSomar = (n1, n2) => {
 
 //RETURN VOID
 //QUANDO FUNÇÃO NÃO TEM NENHUM TIPO DE RETURN 
- function removeElemento(elemento:HTMLElement): void {
-     elemento.remove();
- }
- removeElemento(document.getElementById('.teste'));
+                                                                    //  function removeElemento(elemento:HTMLElement): void {
+                                                                    //      elemento.remove();
+                                                                    //  }
+                                                                    //  removeElemento(document.getElementById('.teste'));
  
  //OU
 
@@ -170,7 +170,8 @@ const Somando: DiceSomar = (n1, n2) => {
      return 'Aceitou o void'
  }
 const resVoid = functionVoid();
-console.log(resVoid)
+
+console.log(resVoid) 
 
 //MÓDULO 3
 //WATCHMODE deixa ele convertendo o .ts para .js automatico 
@@ -181,3 +182,20 @@ console.log(resVoid)
 
 const es5 = 'es5';
 var es66= 'es6';
+
+//LIB
+const btn = document.querySelector('.lib') as HTMLButtonElement;
+console.log(btn);
+btn.addEventListener('click', () => {
+    console.log('Clicando no lib!!!')
+})
+
+
+// rooDir e outDir
+// ourDir é onde o arquivo terá a saida na pasta do projeto quando for copilado
+//  Configurando no arquivo tsconfig.json hahah
+
+
+
+
+

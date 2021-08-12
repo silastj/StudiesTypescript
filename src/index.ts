@@ -1,7 +1,7 @@
 const input1 = document.querySelector('#numero1') as HTMLInputElement;
 const input2 = document.querySelector('#numero2') as HTMLInputElement;
-const button = document.querySelector('#calc')
-const res = document.querySelector('#res')
+const button = document.querySelector('#calc') as HTMLButtonElement
+const res = document.querySelector('#res') as HTMLElement
 
 
 
@@ -15,8 +15,8 @@ button.addEventListener('click', function(){
 
 const inputLetra = document.querySelector('#inputLetra') as HTMLInputElement;
 const resInputLetra = inputLetra.value;
-const letra = document.querySelector('#letra')
-const resLetra = document.querySelector('#resLetra')
+const letra = document.querySelector('#letra') as HTMLElement
+const resLetra = document.querySelector('#resLetra') as HTMLElement
 
 function FirstLetter(inputLetra:string): any{
     const firstletter = inputLetra.charAt(0).toUpperCase();
@@ -25,3 +25,6 @@ function FirstLetter(inputLetra:string): any{
 
 const resultado = FirstLetter('silas')
 console.log(resultado)
+
+
+//teste
