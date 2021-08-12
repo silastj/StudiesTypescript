@@ -101,8 +101,16 @@ var Somando = function (n1, n2) {
 function removeElemento(elemento) {
     elemento.remove();
 }
-var functionVoid = function (nn) {
+removeElemento(document.getElementById('.teste'));
+var functionVoid = function () {
     return 'Aceitou o void';
 };
-var resVoid = functionVoid('silas');
+var resVoid = functionVoid();
 console.log(resVoid);
+//MÓDULO 3
+//WATCHMODE deixa ele convertendo o .ts para .js automatico 
+// TSC SRC/SCRIPT.TS -W
+//CRIANDO O ARQUIVO .TSCONFIG.JSON
+// ENTENDENDO O TARGET => transformando em es5 ou es6
+var es5 = 'es5';
+var es66 = 'es6';

@@ -161,7 +161,7 @@ const Somando: DiceSomar = (n1, n2) => {
  function removeElemento(elemento:HTMLElement): void {
      elemento.remove();
  }
-//  removeElemento(document.getElementById('teste'));
+ removeElemento(document.getElementById('.teste'));
  
  //OU
 
@@ -171,3 +171,13 @@ const Somando: DiceSomar = (n1, n2) => {
  }
 const resVoid = functionVoid();
 console.log(resVoid)
+
+//MÓDULO 3
+//WATCHMODE deixa ele convertendo o .ts para .js automatico 
+            // TSC SRC/SCRIPT.TS -W
+
+//CRIANDO O ARQUIVO .TSCONFIG.JSON
+// ENTENDENDO O TARGET => transformando em es5 ou es6
+
+const es5 = 'es5';
+var es66= 'es6';
